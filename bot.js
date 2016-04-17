@@ -24,11 +24,11 @@ function postMessage() {
   var randomnum = Math.floor((Math.random() * 10) + 1);
   if (randomnum > 5)
     {
-        botresponse = "heads";
+        botResponse = "heads";
     }
     else
     {
-        botresponse = "tails";
+        botResponse = "tails";
     }
 
 
