@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^ayy$/;
+      botRegex = /^\/coinflip/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -21,7 +21,16 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "lmao";
+  var randomnum = Math.floor((Math.random() * 10) + 1);
+  if (randomnum > 5)
+    {
+        botresponse = "heads";
+    }
+    else
+    {
+        botresponse = "tails";
+    }
+
 
   options = {
     hostname: 'api.groupme.com',
