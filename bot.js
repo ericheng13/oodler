@@ -66,7 +66,7 @@ function postMessage() {
     {
         botResponse = "No way";
     }
-    else botResponse = "You're an idiot"
+    else botResponse = "You're an idiot";
 
 
   options = {
