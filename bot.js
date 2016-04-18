@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/coinflip/;
+      botRegex = /^\conch?/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -21,15 +21,52 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  var randomnum = Math.floor((Math.random() * 10) + 1);
-  if (randomnum > 5)
+  var randomnum = Math.floor((Math.random() * 20) + 1);
+  if (randomnum > 18)
     {
-        botResponse = "heads";
+        botResponse = "Absolutely";
     }
-    else
+    else if (randomnum > 16)
     {
-        botResponse = "tails";
+        botResponse = "Probably";
     }
+    else if (randomnum > 14)
+    {
+        botResponse = "Yes";
+    }
+    else if (randomnum > 12)
+    {
+        botResponse = "Sure, why not";
+    }
+    else if (randomnum > 10)
+    {
+        botResponse = "Maybe...?";
+    }
+    else if (randomnum > 8)
+    {
+        botResponse = "Not sure, try again later";
+    }
+    else if (randomnum > 6)
+    {
+        botResponse = "No";
+    }
+    else if (randomnum > 4)
+    {
+        botResponse = "I don't think so";
+    }
+    else if (randomnum > 3)
+    {
+        botResponse = "Negative";
+    }
+    else if (randomnum > 2)
+    {
+        botResponse = "No, and you should feel bad for asking";
+    }
+    else if (randomnum > 1)
+    {
+        botResponse = "No way";
+    }
+    else botResponse = "You're an idiot"
 
 
   options = {
