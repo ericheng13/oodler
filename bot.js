@@ -21,10 +21,30 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  var randomnum = Math.floor((Math.random() * 20) + 1);
-  if (randomnum > 18)
+  var randomnum = Math.floor((Math.random() * 30) + 1);
+  if (randomnum > 28)
     {
         botResponse = "Absolutely";
+    }
+    else if (randomnum > 26)
+    {
+        botResponse = "https://nacidaeldocedejulio.files.wordpress.com/2014/05/hahahaha-no-107105163314.png";
+    }
+    else if (randomnum > 24)
+    {
+        botResponse = "http://www.reactiongifs.us/wp-content/uploads/2014/07/yes_snoop_dogg.gif";
+    }
+    else if (randomnum > 22)
+    {
+        botResponse = "https://pixabay.com/static/uploads/photo/2014/04/03/10/08/chef-309934_960_720.png";
+    }
+    else if (randomnum > 20)
+    {
+        botResponse = "Nein";
+    }
+    else if (randomnum > 18)
+    {
+        botResponse = "By all means";
     }
     else if (randomnum > 16)
     {
