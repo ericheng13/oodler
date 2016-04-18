@@ -21,10 +21,14 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  var randomnum = Math.floor((Math.random() * 30) + 1);
-  if (randomnum > 28)
+  var randomnum = Math.floor((Math.random() * 32) + 1);
+  if (randomnum > 30)
     {
         botResponse = "Absolutely";
+    }
+    else if (randomnum > 28)
+    {
+        botResponse = "Bush did 9/11";
     }
     else if (randomnum > 26)
     {
