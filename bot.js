@@ -21,10 +21,18 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  var randomnum = Math.floor((Math.random() * 50) + 1);
-  if (randomnum > 48)
+  var randomnum = Math.floor((Math.random() * 52) + 1);
+  if (randomnum > 50)
     {
         botResponse = "Absolutely";
+    }
+    else if (randomnum > 46)
+    {
+        botResponse = "http://ih1.redbubble.net/image.214499180.8793/flat,800x800,075,f.jpg";
+    }
+    else if (randomnum > 48)
+    {
+        botResponse = "Kill yourself";
     }
     else if (randomnum > 46)
     {
@@ -100,11 +108,11 @@ function postMessage() {
     }
     else if (randomnum > 10)
     {
-        botResponse = "Maybe...?";
+        botResponse = "Harambe forbids it";
     }
     else if (randomnum > 8)
     {
-        botResponse = "Not sure, try again later";
+        botResponse = "Yee";
     }
     else if (randomnum > 6)
     {
