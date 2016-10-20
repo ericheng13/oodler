@@ -22,7 +22,30 @@ function respond() {
   var newstring = [];
 var i;
 for (i = 10; i < str.length; i++) { 
-newstring[i] = str.substr(i,1);
+if (str.substr(i,1) == "a")
+   {
+      newstring[i] = "oodle";
+   }
+   else if (str.substr(i,1) == "e")
+   {
+      newstring[i] = "oodle";
+   }
+   else if (str.substr(i,1) == "i")
+   {
+      newstring[i] = "oodle";
+   }
+   else if (str.substr(i,1) == "o")
+   {
+      newstring[i] = "oodle";
+   } 
+   else if (str.substr(i,1) == "u")
+   {
+      newstring[i] = "oodle";
+   }
+   else
+   {
+      newstring[i] = str.substr(i,1);
+   }
 }
 
 var finalstring = (newstring.toString()).replace(/,/g, '');
