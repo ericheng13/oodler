@@ -6,10 +6,11 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^Test/;
+  var text = request.text;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request);
+    postMessage(text);
     this.res.end();
   } else {
     console.log("don't care");
@@ -18,10 +19,10 @@ function respond() {
   }
 }
 
-function postMessage(request) {
+function postMessage(text) {
   var botResponse, options, body, botReq;
 
-        botResponse = request;
+        botResponse = text;
 
 
   options = {
