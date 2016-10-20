@@ -21,7 +21,7 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq;
 
-        botResponse = "butts";
+        botResponse = request;
 
 
   options = {
