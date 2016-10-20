@@ -3,14 +3,37 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
+
+
+
+
+
+
+
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^Test/;
-  var text = request.text;
+      botRegex = /^Translate/;
+  var str = request.text;
 
+  
+  var newstring = [];
+var i;
+for (i = 10; i < str.length; i++) { 
+newstring[i] = str.substr(i,1);
+}
+
+var finalstring = (newstring.toString()).replace(/,/g, '');
+  
+  
+  
+  
+  
+  
+  
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(text);
+    postMessage(str);
     this.res.end();
   } else {
     console.log("don't care");
