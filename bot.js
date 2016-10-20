@@ -42,6 +42,26 @@ if (str.substr(i,1) == "a")
    {
       newstring[i] = "oodle";
    }
+  else if (str.substr(i,1) == "A")
+   {
+      newstring[i] = "OODLE";
+   }
+   else if (str.substr(i,1) == "E")
+   {
+      newstring[i] = "OODLE";
+   }
+   else if (str.substr(i,1) == "I")
+   {
+      newstring[i] = "OODLE";
+   } 
+   else if (str.substr(i,1) == "O")
+   {
+      newstring[i] = "OODLE";
+   }
+  else if (str.substr(i,1) == "U")
+   {
+      newstring[i] = "OODLE";
+   }
    else
    {
       newstring[i] = str.substr(i,1);
