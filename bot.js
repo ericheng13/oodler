@@ -30,7 +30,7 @@ for (i = 6; i < str.length; i++) {
    }
    else if (str.substr(i,1) == "e")
    {
-     newstring[i] = h_alph[Math.random()*12];
+     newstring[i] = h_alph[Math.floor(Math.random()*13)];
    }
    else if (str.substr(i,1) == "i")
    {
