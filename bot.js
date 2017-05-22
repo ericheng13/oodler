@@ -15,9 +15,10 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^(U|u)(nuhi|NUHI)/;
   var str = request.text;
-  var h_alph = ['a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w', "'" ];//'\''];
+  var h_alph = ['a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w', "'" ];
   var not_h_alph = ['b', 'c', 'd', 'f', 'g', 'j', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'];
-
+  var h_alph_caps = ['A', 'E', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'U', 'W', "'" ];
+  var not_h_alph_caps = ['B', 'C', 'D', 'F', 'G', 'J', 'Q', 'R', 'S', 'T', 'V', 'X', 'Y', 'Z'];
 
 
 
@@ -26,12 +27,12 @@ var i;
 for (i = 6; i < str.length; i++) {
    if (not_h_alph.indexOf(str.substr(i,1)) >= 0)
    {
-      newstring[i] = h_alph[Math.floor(Math.random()*13)].toUpper();//h_alph[Math.random()*13];
+      newstring[i] = h_alph[Math.floor(Math.random()*13)];//h_alph[Math.random()*13];
    }
-  // else if (not_h_alph.indexOf(str.substr(i,1).toLower()) >= 0)
-  // {
-  //    newstring[i] = h_alph[Math.floor(Math.random()*13)].toUpper();//h_alph[Math.random()*13];
-  // }
+   if (not_h_alph_caps.indexOf(str.substr(i,1)) >= 0)
+   {
+      newstring[i] = h_alph_caps[Math.floor(Math.random()*13)];//h_alph[Math.random()*13];
+   }
    else
    {
       newstring[i] = str.substr(i,1);
