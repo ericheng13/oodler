@@ -13,22 +13,28 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^Translate/;
+      botRegex = /^(U|u)(nuhi|NUHI)/;
   var str = request.text;
+  var h_alph[] = {'a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w' '\''};
+  var not_h_alph[] = {'b', 'c', 'd', 'f', 'g', 'j', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'};
 
-  
-  
-  
+
+
+
   var newstring = [];
 var i;
-for (i = 10; i < str.length; i++) { 
-if (str.substr(i,1) == "a")
+for (i = 10; i < str.length; i++) {
+  if (not_h_alph.includes(str.substr(i,1))
+  {
+    newstring[i] = "IT WORKED";
+  }
+  else if (str.substr(i,1) == "a")
    {
-      newstring[i] = "oodle";
+      newstring[i] = h_alph[Math.random()*13];
    }
    else if (str.substr(i,1) == "e")
    {
-      newstring[i] = "oodle";
+     newstring[i] = h_alph[Math.random()*13];
    }
    else if (str.substr(i,1) == "i")
    {
@@ -37,7 +43,7 @@ if (str.substr(i,1) == "a")
    else if (str.substr(i,1) == "o")
    {
       newstring[i] = "oodle";
-   } 
+   }
    else if (str.substr(i,1) == "u")
    {
       newstring[i] = "oodle";
@@ -53,7 +59,7 @@ if (str.substr(i,1) == "a")
    else if (str.substr(i,1) == "I")
    {
       newstring[i] = "OODLE";
-   } 
+   }
    else if (str.substr(i,1) == "O")
    {
       newstring[i] = "OODLE";
@@ -69,13 +75,13 @@ if (str.substr(i,1) == "a")
 }
 
 var finalstring = (newstring.toString()).replace(/,/g, '');
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(finalstring);
