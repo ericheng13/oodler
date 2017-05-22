@@ -26,7 +26,7 @@ var i;
 for (i = 6; i < str.length; i++) {
    if (not_h_alph.indexOf(str.substr(i,1)) >= 0)
    {
-      newstring[i] = h_alph[Math.floor(Math.random()*13)];//h_alph[Math.random()*13];
+      newstring[i] = h_alph[Math.floor(Math.random()*13)].toUpper();//h_alph[Math.random()*13];
    }
   // else if (not_h_alph.indexOf(str.substr(i,1).toLower()) >= 0)
   // {
