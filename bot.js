@@ -4,16 +4,10 @@ var cool = require('cool-ascii-faces');
 var botID = process.env.BOT_ID;
 
 
-
-
-
-
-
-
-
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^(U|u)(nuhi|NUHI)/;
+      botRegexRC = /(R|r)(oller|OLLER)(| )(C|c)(oaster|OASTER)/
   var str = request.text;
   var h_alph = ['a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w', "'" ];
   var not_h_alph = ['b', 'c', 'd', 'f', 'g', 'j', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'];
@@ -51,7 +45,11 @@ var finalstring = (newstring.toString()).replace(/,/g, '');
     this.res.writeHead(200);
     postMessage(finalstring);
     this.res.end();
-  } else {
+  } else if(request.text && botRegexRC.test(request.text)) {
+      this.res.writeHead(200);
+      postMessage("https://youtu.be/nXpB1rixnPQ");
+      this.res.end();
+  }else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
