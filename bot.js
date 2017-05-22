@@ -15,8 +15,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^(Translate)/;
   var str = request.text;
-  //var h_alph[] = {'a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w' '\''};
-  //var not_h_alph[] = {'b', 'c', 'd', 'f', 'g', 'j', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'};
+  var h_alph = ['a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w' '\''];
+  var not_h_alph = ['b', 'c', 'd', 'f', 'g', 'j', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'];
 
 
 
@@ -30,7 +30,7 @@ for (i = 10; i < str.length; i++) {
    }
    else if (str.substr(i,1) == "e")
    {
-     newstring[i] = "eric";//h_alph[Math.random()*13];
+     newstring[i] = h_alph[Math.random()*13];
    }
    else if (str.substr(i,1) == "i")
    {
