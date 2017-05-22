@@ -26,11 +26,11 @@ var i;
 for (i = 10; i < str.length; i++) {
    if (str.substr(i,1) == "a")
    {
-      newstring[i] = h_alph[Math.random()*13];
+      newstring[i] = "eric";//h_alph[Math.random()*13];
    }
    else if (str.substr(i,1) == "e")
    {
-     newstring[i] = h_alph[Math.random()*13];
+     newstring[i] = "eric";//h_alph[Math.random()*13];
    }
    else if (str.substr(i,1) == "i")
    {
