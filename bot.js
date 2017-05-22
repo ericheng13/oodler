@@ -24,7 +24,7 @@ function respond() {
   var newstring = [];
 var i;
 for (i = 6; i < str.length; i++) {
-   if (str.substr(i,1) == "a")
+   if (not_h_alph.indexOf(str.substr(i,1)) >= 0)
    {
       newstring[i] = "eric";//h_alph[Math.random()*13];
    }
