@@ -15,7 +15,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^(U|u)(nuhi|NUHI)/;
   var str = request.text;
-  var h_alph = ['a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w' '\''];
+  var h_alph = ['a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w' ];//'\''];
   var not_h_alph = ['b', 'c', 'd', 'f', 'g', 'j', 'q', 'r', 's', 't', 'v', 'x', 'y', 'z'];
 
 
@@ -23,7 +23,7 @@ function respond() {
 
   var newstring = [];
 var i;
-for (i = 10; i < str.length; i++) {
+for (i = 6; i < str.length; i++) {
    if (str.substr(i,1) == "a")
    {
       newstring[i] = "eric";//h_alph[Math.random()*13];
