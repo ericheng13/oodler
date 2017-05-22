@@ -30,7 +30,7 @@ for (i = 10; i < str.length; i++) {
    }
    else if (str.substr(i,1) == "e")
    {
-     newstring[i] = h_alph[2];//Math.random()*13];
+     newstring[i] = "h_alph[2]";//Math.random()*13];
    }
    else if (str.substr(i,1) == "i")
    {
