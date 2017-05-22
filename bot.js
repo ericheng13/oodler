@@ -28,42 +28,10 @@ for (i = 6; i < str.length; i++) {
    {
       newstring[i] = h_alph[Math.floor(Math.random()*13)];//h_alph[Math.random()*13];
    }
-  //  else if (str.substr(i,1) == "e")
-  //  {
-  //    newstring[i] = h_alph[Math.floor(Math.random()*13)];
-  //  }
-  //  else if (str.substr(i,1) == "i")
-  //  {
-  //     newstring[i] = "oodle";
-  //  }
-  //  else if (str.substr(i,1) == "o")
-  //  {
-  //     newstring[i] = "oodle";
-  //  }
-  //  else if (str.substr(i,1) == "u")
-  //  {
-  //     newstring[i] = "oodle";
-  //  }
-  // else if (str.substr(i,1) == "A")
-  //  {
-  //     newstring[i] = "OODLE";
-  //  }
-  //  else if (str.substr(i,1) == "E")
-  //  {
-  //     newstring[i] = "OODLE";
-  //  }
-  //  else if (str.substr(i,1) == "I")
-  //  {
-  //     newstring[i] = "OODLE";
-  //  }
-  //  else if (str.substr(i,1) == "O")
-  //  {
-  //     newstring[i] = "OODLE";
-  //  }
-  // else if (str.substr(i,1) == "U")
-  //  {
-  //     newstring[i] = "OODLE";
-  //  }
+  else if (not_h_alph.indexOf(str.substr(i,1).toUpper()) >= 0)
+  {
+     newstring[i] = h_alph[Math.floor(Math.random()*13)].toUpper();//h_alph[Math.random()*13];
+  }
    else
    {
       newstring[i] = str.substr(i,1);
