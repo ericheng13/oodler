@@ -24,11 +24,7 @@ function respond() {
   var newstring = [];
 var i;
 for (i = 10; i < str.length; i++) {
-  if (!not_h_alph.includes(str.substr(i,1))
-  {
-    newstring[i] = "IT WORKED";
-  }
-  else if (str.substr(i,1) == "a")
+   if (str.substr(i,1) == "a")
    {
       newstring[i] = h_alph[Math.random()*13];
    }
