@@ -20,7 +20,7 @@ function respond() {
     "'Strive to reach the highest.'\n -Kulia i ka nu’u",
     "'Unfolded by the water are the faces of the flowers.'\n -Mohala i ka wai ka maka o ka pua",
     "'There is life in a kindly reply.'\n -Ua ola no i ka pane a ke aloha",
-    "'No kind deed has ever lacked its reward.'\n -`A`ohe lokomaika`i i nele i ke pâna`i",
+    "'No kind deed has ever lacced its reward.'\n -`A`ohe lokomaika`i i nele i ke pâna`i",
     "'Dare to dance, leave shame at home.'\n -A’a i ka hula, waiho i ka maka’u i ka hale",
     "'No cliff is so tall it cannot be climbed.'\n -‘A’OHE PU’U KI’EKI’E KE HO’A’O ‘IA E PI’I",
     "'It is natural for people to behave in a loving way.'\n -Ua Kuluma Ke Kanaka I Ke Aloha",
