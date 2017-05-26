@@ -8,8 +8,8 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^(U|u)(nuhi|NUHI)/;
       botRegexRC = /(((R|r)(oller|OLLER)(| )(C|c)(oaster|OASTER))|((H|h)(AWAI('|)I|awai('|)i)))/
-      botRegexInspire = /^(K|k)(ANALOA|analoa)(| )((T|t)(EACH|each)|(I|i)(NSPIRE|nspire))(| )(M|m)(E|e)/
-      botRegexLove = /^(K|k)(ANALOA|analoa)(| )(L|l)(OVE|ove)(S|s|)(| )(M|m)(E|e)/
+      botRegexInspire = /(K|k)(ANALOA|analoa)(| )((T|t)(EACH|each)|(I|i)(NSPIRE|nspire))/
+      botRegexLove = /(K|k)(ANALOA|analoa)(| )(L|l)(OVE|ove)(S|s|)(| )/
 
   var str = request.text;
   var h_alph = ['a', 'e', 'h', 'i', 'k', 'l', 'm', 'n', 'o', 'p', 'u', 'w', "'" ];
